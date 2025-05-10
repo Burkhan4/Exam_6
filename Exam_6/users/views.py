@@ -28,7 +28,6 @@ def logout_view(request):
     logout(request)
     return redirect('/')
 
-@login_required
 def confirm_email(request):
     if request.method == 'POST':
         email = request.POST.get('email')
