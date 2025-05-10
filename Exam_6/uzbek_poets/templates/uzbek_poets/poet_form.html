@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block title %}Shoir formasi{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Shoir qo‘shish / tahrirlash</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.name.label_tag }} {{ form.name|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            {{ form.birth_date.label_tag }} {{ form.birth_date|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            {{ form.death_date.label_tag }} {{ form.death_date|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            {{ form.biography.label_tag }} {{ form.biography|add_class:"form-control" }}
+        </div>
+        <div class="mb-3">
+            {{ form.works.label_tag }} {{ form.works|add_class:"form-control" }}
+        </div>
+        <button type="submit" class="btn btn-success">Saqlash</button>
+    </form>
+</div>
+{% endblock %}

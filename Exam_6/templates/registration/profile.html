@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Sizning profilingiz</h2>
+    <p><strong>Foydalanuvchi nomi:</strong> {{ user.username }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Ismi:</strong> {{ user.first_name }}</p>
+    <p><strong>Familiyasi:</strong> {{ user.last_name }}</p>
+</div>
+{% endblock %}

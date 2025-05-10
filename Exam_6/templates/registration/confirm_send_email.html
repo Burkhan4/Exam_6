@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Emailni tastiqlash
+{% endblock %}
+
+{% block content %}
+    <h1>Iltimos emailga kelgan raqamni kiriting</h1>
+    <form action="{% verify-email %}" method="post">
+        {% csrf_token %}
+        <input type="number" max="999" min="100" name="num1">-<input type="number" max="999" min="100" name="num2">
+        <input type="submit" value="send" class="btn btn-succes mt-3">
+    </form>
+{% endblock %}
